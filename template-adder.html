@@ -1,0 +1,19 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-fab/paper-fab.html">
+<link rel="import" href="../iron-icons/iron-icons.html">
+
+<dom-module id="template-adder">
+    <template>
+        <style></style>
+        <paper-fab icon="icons:add" title="add new template" on-click="_handleNewTemplate"></paper-fab>
+    </template>
+    <script>
+        Polymer({
+            is: 'template-adder',
+
+            _handleNewTemplate: function() {
+                this.set('route.path', '/templates/edit/');
+            }
+        });
+    </script>
+</dom-module>
